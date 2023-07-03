@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>
+      "Калькулятор расчёта стоимости автомобиля в зависимости от комплектации"
+    </title>
+  </head>
+  <body>
+    <h1>
+      "Калькулятор расчёта стоимости автомобиля в зависимости от комплектации"
+    </h1>
+
+    <form name="my_form" novalidate class="my_form">
+      <div>
+        <select name="brend">
+          <option selected="" value="Default">Выберите марку автомобиля</option>
+          <option value="1">Reno</option>
+          <option value="2">Opel</option>
+          <option value="3">Mazda</option>
+          <option value="4">Jaguar</option>
+        </select>
+      </div>
+      <div>
+        <select name="model">
+          <option selected="" value="Default">Mодель</option>
+          <option value="1">Reno</option>
+          <option value="2">Opel</option>
+          <option value="3">Mazda</option>
+          <option value="4">Jaguar</option>
+        </select>
+      </div>
+      <div>
+        <label for="fuelType">Выберите тип топлива:</label>
+        <input type="radio" name="fuelType" value="" /><span>бензин</span>
+        <input type="radio" name="fuelType" value="" /><span>дизель</span>
+        <input type="radio" name="fuelType" value="" /><span>газ</span>
+        <input type="radio" name="fuelType" value="" /><span
+          >электричество</span
+        >
+      </div>
+      <div>
+        <label for="conditions"
+          >Введите Объем двигателя (от 1.1 литра до 3.5 литров):</label
+        >
+        <input
+          type="number"
+          name="engineCapacity"
+          placeholder="Объем двигателя"
+          id="engineCapacity"
+          minlength="1.1"
+          maxlength="3.5"
+          required
+        />
+      </div>
+      <div>
+        <label for="conditions">Выберите состояния автомобиля:</label>
+        <input type="radio" name="conditions" value="conditions_new" /><span
+          >новый</span
+        >
+        <input type="radio" name="conditions" value="conditions_used" /><span
+          >подержанный</span
+        >
+      </div>
+      <div>
+        <label for="payment">Выберите количество владельцев:</label>
+        <input type="radio" name="owner" value="owner1-2" /><span
+          >1-2 владельца</span
+        >
+        <input type="radio" name="owner" value="owner3orMore" /><span
+          >более 3-х владельцев</span
+        >
+      </div>
+      <div>
+        <label for="payment">Выберите способ оплаты:</label>
+        <input type="radio" name="payment" value="paymentCard" /><span
+          >картой</span
+        >
+        <input type="radio" name="payment" value="paymentCash" /><span
+          >наличными</span
+        >
+        <input type="radio" name="payment" value="paymentBill" /><span
+          >счет на юридическое лицо</span
+        >
+      </div>
+
+      <div>
+        <input type="submit" name="submit" value="Расчитать" />
+      </div>
+    </form>
+
+    <script src="./assets/index.js"></script>
+  </body>
+</html>

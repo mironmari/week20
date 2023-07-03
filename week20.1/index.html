@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>"Форма регистрации"</title>
+  </head>
+  <body>
+    <h1>"Форма регистрации"</h1>
+
+    <form name="my_form" novalidate>
+      <ul>
+        <li><label for="name">Введите Имя:</label></li>
+        <li>
+          <input
+            type="text"
+            name="name"
+            placeholder="Имя"
+            id="name"
+            minlength="2"
+            maxlength="20"
+            pattern="^[А-Яа-яЁё\s]+$"
+            required
+          />
+        </li>
+        <span class="error" id="name__error"></span>
+
+        <li><label for="email">Введите email:</label></li>
+        <li>
+          <input
+            type="email"
+            name="email"
+            placeholder="E-Mail"
+            id="email"
+            minlength="8"
+            required
+          />
+        </li>
+        <span class="error" id="email__error"></span>
+
+        <li><label for="age" class="form-label age">Возраст:</label></li>
+        <li>
+          <input
+            type="number"
+            name="age"
+            placeholder="Введите ваш возраст"
+            id="age"
+            required
+          />
+        </li>
+        <span class="error" id="age__error"></span>
+
+        <li><label id="gender">Sex:</label></li>
+        <li>
+          <input type="radio" name="sex" value="Male" /><span>Male</span>
+          <input type="radio" name="sex" value="Female" /><span>Female</span>
+        </li>
+
+        <li><label for="email">Ваша Профессия</label></li>
+        <li>
+          <select name="Профессия">
+            <option selected="" value="Default">Выберите профессию</option>
+            <option value="1">Врач</option>
+            <option value="2">Программист</option>
+            <option value="3">Учитель</option>
+            <option value="4">Дизайнер</option>
+            <option value="5">Продавец</option>
+            <option value="6">Инженер</option>
+            <option value="7">Другое</option>
+          </select>
+        </li>
+
+        <li>
+          <label for="password"
+            >Введите пароль (от 8 символов, минимум одна заглавная буква, одна
+            строчнуа буква и одна цифра):</label
+          >
+        </li>
+        <li>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            minlength="8"
+          />
+        </li>
+
+        <li>
+          <label>Я согласен с политикой обработки персональных данных</label>
+        </li>
+        <li><input type="checkbox" name="agree" required /></li>
+
+        <li><input type="submit" name="submit" value="Submit" /></li>
+      </ul>
+    </form>
+
+    <script src="./assets/index.js"></script>
+  </body>
+</html>

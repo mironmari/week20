@@ -1,0 +1,43 @@
+h1 {
+  margin: auto;
+}
+.my_form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 800px;
+  align-items: center;
+  margin: auto;
+}
+div {
+  border: solid 2px rgb(197, 195, 204);
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(240, 231, 231);
+}
+
+/* This is our style for the invalid fields */
+input:invalid {
+  border-color: rgb(210, 183, 183);
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+/* Это стили для кастомных сообщений об ошибке */
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(153, 0, 0);
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
